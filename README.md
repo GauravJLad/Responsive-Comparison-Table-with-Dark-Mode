@@ -35,6 +35,8 @@ A modern, accessible, and responsive **comparison table** component featuring ze
 
 🔗 **GitHub Pages:**
 
+[https://gauravjlad.github.io/Responsive-Comparison-Table-with-Dark-Mode](https://gauravjlad.github.io/Responsive-Comparison-Table-with-Dark-Mode)
+
 ---
 
 ## 📧 Let’s Connect
