@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f3ff;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: #1c1c1e;
+  color: #f1f1f1;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 32px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #6c5ce7;
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}
+
+table {
+  width: 100%;
+  max-width: 850px;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+body.dark table {
+  background-color: #2c2c2e;
+}
+
+thead {
+  background: linear-gradient(90deg, #5f3dc4, #6f4bcc);
+  color: #ffffff;
+}
+
+thead th {
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+}
+
+tbody th,
+tbody td {
+  padding: 18px 24px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f3f0ff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e5dbff;
+}
+
+body.dark tbody tr:nth-child(odd) {
+  background-color: #2c2c2e;
+}
+
+body.dark tbody tr:nth-child(even) {
+  background-color: #3a3a3c;
+}
+
+tbody tr:hover {
+  background: linear-gradient(90deg, #d0bfff, #e5dbff);
+  cursor: pointer;
+  transform: scale(1.003);
+}
+
+body.dark tbody tr:hover {
+  background: linear-gradient(90deg, #3a3a3c, #4a4a4c);
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  thead th,
+  tbody td,
+  tbody th {
+    padding: 12px 16px;
+  }
+}
